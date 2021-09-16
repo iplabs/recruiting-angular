@@ -1,5 +1,3 @@
-# [internal Solution] Angular Recruiting Task 
-
 # Simple Picture Viewer
 ## Task
 Complete this Angular app. The goal is to have 2 simple pages.
