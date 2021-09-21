@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
+import { Router } from '@angular/router';
 import { ImageService } from './imageService';
 
 @Component({
@@ -18,8 +19,18 @@ export class ImageOverviewComponent {
   public images: any[] = [];
 
   constructor(
-    public imageService: ImageService
+    public imageService: ImageService,
+    private router: Router,
+    private zone: NgZone
   ) {}
+
+  // In Stackblitz, dynamic [routerLink]'s seem to cause problems because they run outside the zone.
+  // Therefore, please use this method here for the navigation.'
+  public goToDetails(id: number) {
+    this.zone.run(() => {
+      this.router.navigate(['/image/' + id]);
+    });
+  }
 
   // TODO implement me
 }
