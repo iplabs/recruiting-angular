@@ -11,7 +11,7 @@ Please fork this project, otherwise your changes will not be saved. When you hav
 
 ## Hints
 * In the folder `src/app/iplabs/` you will find data and helper-classes to be used. They must be used and may not be modified.
-* Use all of the given structures, classes and methods
+* Important: Use all of the given structures, classes and methods
 * Styling and unit-testing is not necessary
 * Here you will find screenshots of an example implementation:
   * http://imgbox.com/wLiccjJz

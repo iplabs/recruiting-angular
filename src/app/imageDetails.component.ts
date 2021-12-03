@@ -12,6 +12,7 @@ import { ImageService } from './imageService';
     <div class="details">
       <p>original width: [width]</p>
       <p>original height: [height]</p>
+      <p>file size: [fileSize in MB]</p>
     </div>
     <div>
       <label>Change picture preview size:</label><br />

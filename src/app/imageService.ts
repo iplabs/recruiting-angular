@@ -6,6 +6,7 @@ import { ImageLoader } from './iplabs/imageLoader';
 export interface ImageObject {
   htmlImage: HTMLImageElement;
   id: number;
+  fileSize: number;
 }
 
 @Injectable({ providedIn: 'root' })

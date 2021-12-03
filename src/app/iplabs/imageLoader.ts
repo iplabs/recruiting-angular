@@ -17,6 +17,17 @@ export class ImageLoader {
     }
   }
 
+  public getFileSizeFromDataUrl(dataUrl: string): number {
+    const separator = ";base64,";
+    const index = dataUrl.indexOf(";base64,");
+    if (index === -1) {
+      throw new Error("Can't decode data url");
+    }
+    const data = dataUrl.substr(index + separator.length);
+    const decoded = atob(data);
+    return decoded.length;
+  }
+
   private readBlobAsDataURL(blob: Blob): Promise<string> {
     return new Promise((resolve, reject) => {
       let reader = new FileReader();
